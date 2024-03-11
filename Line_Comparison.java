@@ -23,12 +23,16 @@ public class Line_Comparison {
         float length_of_line1 = (float) Math.sqrt(Math.pow((x2-x1),2)+Math.pow((y2-y1),2));
         float length_of_line2 = (float) Math.sqrt(Math.pow((x4-x3),2)+Math.pow((y4-y3),2));
 
-        if(String.valueOf(length_of_line1).equals(String.valueOf(length_of_line2))){
+        if(String.valueOf(length_of_line1).compareTo(String.valueOf(length_of_line2))==0){
             System.out.println("Both the lines are of equal length");
         }
-        else{
-            System.out.println("Both the lines are not of equal length");
+        else if(String.valueOf(length_of_line1).compareTo(String.valueOf(length_of_line2))<0){
+            System.out.println("Length of line 1 is less than line 2");
         }
+        else{
+            System.out.println("Length of line 1 is greater than line 2");
+        }
+
 
     }
 }
