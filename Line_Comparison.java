@@ -1,8 +1,7 @@
 import java.util.Scanner;
 public class Line_Comparison {
     public static void main(String[] args) {
-    	System.out.print("Welcome to Line Comparison Computation Program");
-	Scanner sc=new Scanner(System.in);
+    	Scanner sc=new Scanner(System.in);
         System.out.println("Enter the coordinate x1 : ");
         int x1=sc.nextInt();
         System.out.println("Enter the coordinate y1 : ");
@@ -12,8 +11,24 @@ public class Line_Comparison {
         System.out.println("Enter the coordinate y2 : ");
         int y2=sc.nextInt();
 
-        float length_of_line = (float) Math.sqrt(Math.pow((x2-x1),2)+Math.pow((y2-y1),2));
-        System.out.println("The length of line "+"("+x1+","+y1+")"+" and "+"("+x2+","+y2+")"+" is: "+length_of_line);
--
+        System.out.println("Enter the coordinate x3 : ");
+        int x3=sc.nextInt();
+        System.out.println("Enter the coordinate y3 : ");
+        int y3=sc.nextInt();
+        System.out.println("Enter the coordinate x4 : ");
+        int x4=sc.nextInt();
+        System.out.println("Enter the coordinate y4 : ");
+        int y4=sc.nextInt();
+
+        float length_of_line1 = (float) Math.sqrt(Math.pow((x2-x1),2)+Math.pow((y2-y1),2));
+        float length_of_line2 = (float) Math.sqrt(Math.pow((x4-x3),2)+Math.pow((y4-y3),2));
+
+        if(String.valueOf(length_of_line1).equals(String.valueOf(length_of_line2))){
+            System.out.println("Both the lines are of equal length");
+        }
+        else{
+            System.out.println("Both the lines are not of equal length");
+        }
+
     }
 }
